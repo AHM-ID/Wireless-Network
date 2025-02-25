@@ -45,12 +45,10 @@
 - کابل Cross-Over
 
 #### 📝 مراحل اجرا
+1. افزودن سوئیچ و سه PC به محیط
+2. اتصال دستگاه‌ها با کابل Straight-Through
+3. تنظیم آدرس IP:
 
-```plaintext
-۱. افزودن سوئیچ و سه PC به محیط
-۲. اتصال دستگاه‌ها با کابل Straight-Through
-۳. تنظیم آدرس IP:
-```
 <div align="left">
 
 ```code
@@ -58,12 +56,10 @@
    - PC1: 192.168.1.2/24
    - PC2: 192.168.1.3/24
 ```
-
 </div>
 
-```plaintext
-۴. تست ارتباط با دستور ping
-```
+4. تست ارتباط با دستور ping
+
 </div>
 
 #### 🎨 دیاگرام توپولوژی
@@ -91,22 +87,20 @@
 - کابل Cross-Over
 
 #### 📝 مراحل اجرا
-
-```plaintext
-۱. افزودن سوئیچ و سرور و سه PC به محیط
-۲. اتصال دستگاه‌ها با کابل Cross-Over
-۳. پس از رفتن به تب config
+1. افزودن سوئیچ و سرور و سه PC به محیط
+2. اتصال دستگاه‌ها با کابل Cross-Over
+3. پس از رفتن به تب config
  - تنظیم آدرس IP سرور:
-   -- Server: 192.168.1.1/24
+   + Server: 192.168.1.1/24
  - تنظیم DNS سرور:
-   -- Server: 1.1.1.1
+   + Server: 1.1.1.1
  - تنظیم Default Gateway:
-   -- Server: 192.168.1.1
-۴. پس از رفتن به تب service و بخش DHCP:
+   + Server: 192.168.1.1
+4. پس از رفتن به تب service و بخش DHCP:
  - وارد کردن اطلاعات DNS, Default Gateway
-   -- تنظیم رنج IP شروع و تعداد کاربران
-۵. رفتن به تب Desktop, IP Configuration برای هر کامپیوتر و انتخاب گزینه DHCP
-```
+   + تنظیم رنج IP شروع و تعداد کاربران
+5. رفتن به تب Desktop, IP Configuration برای هر کامپیوتر و انتخاب گزینه DHCP
+
 </div>
 
 #### 🎨 دیاگرام توپولوژی
@@ -230,15 +224,13 @@ Router(config-if)# no shutdown
 - کابل Straight-Through
 
 #### 📝 مراحل اجرا
-
-```plaintext
-۱. افزودن سوئیچ و PC و سرور به محیط
-۲. اتصال دستگاه‌ها با کابل Straight-Through
-۳. تنظیم آدرس IP:
+1. افزودن سوئیچ و PC و سرور به محیط
+2. اتصال دستگاه‌ها با کابل Straight-Through
+3. تنظیم آدرس IP:
    - Server: 192.168.1.1/24
    - سپس تغییر index.html موجود در تب Services/HTTP
-۴. تست عملکرد با رفتن به تب Desktop/Web Browser و جستجوی IP سرور
-```
+4. تست عملکرد با رفتن به تب Desktop/Web Browser و جستجوی IP سرور
+
 </div>
 
 #### 🎨 دیاگرام توپولوژی
@@ -267,12 +259,10 @@ Sniff کردن بسته های مخابره شده میان کاربر، سوئ�
 - کابل Straight-Through
 
 #### 📝 مراحل اجرا
+1. مطابق تمرین گذشته عمل کرده و سپس پس از اتمام مراحل تمرین قبلی ادامه می دهیم.
+2. اتصال دستگاه اسنیفر با کابل Straight-Through به سوئیچ
+3. اجرای دستورات زیر بر روی سوئیچ:
 
-```plaintext
-۱. مطابق تمرین گذشته عمل کرده و سپس پس از اتمام مراحل تمرین قبلی ادامه می دهیم.
-۲. اتصال دستگاه اسنیفر با کابل Straight-Through به سوئیچ
-۳. اجرای دستورات زیر بر روی سوئیچ:
-```
 <div align="left">
 
 ```code
@@ -284,11 +274,10 @@ Switch# show monitor session 1
 ```
 </div>
 
-```plaintext
-۴. تست عملکرد با رفتن به تب Desktop/Command Prompt و اجرای دستورات telnet, ping و یا جستجوی IP سرور در Web Browser
+4. تست عملکرد با رفتن به تب Desktop/Command Prompt و اجرای دستورات telnet, ping و یا جستجوی IP سرور در Web Browser
 - توضیحات: این تنظیمات ترافیک تمام vlan 1 را capture کرده و به مقصد اسنیفر ارسال میکند.
 - توجه: در این تمرین تنها بسته های مشخصی جهت Sniff شدن انتخاب شده اند.
-```
+
 </div>
 
 #### 🎨 دیاگرام توپولوژی
@@ -352,19 +341,16 @@ Implement a simple LAN with Layer 2 connectivity between devices.
 Straight-Through Cable  
 
 #### 📝 Implementation Steps  
-```plaintext
 1. Add switch and three PCs to workspace  
 2. Connect devices using Straight-Through cable  
 3. Configure IP addresses:  
-```
 ```code
    - PC0: 192.168.1.1/24  
    - PC1: 192.168.1.2/24  
    - PC1: 192.168.1.3/24  
 ```
-```plaintext
 4. Test connectivity using ping 
-``` 
+
 #### 🎨 Topology Diagram
 <div align="center"> <img src="./assets/HW-1/pic-11.jpg" width="auto" alt="Layer 2 Topology"> </div>
 
@@ -386,7 +372,6 @@ Implement a network with a DHCP Server setup.
 - Cable: Cross-Over 
 
 #### 📝 Implementation Steps  
-```plaintext
 1. Add switch, server, and three PCs to workspace  
 2. Connect devices using Cross-Over cable  
 3. In the config tab:  
@@ -397,7 +382,7 @@ Implement a network with a DHCP Server setup.
    - Enter DNS and Default Gateway  
    - Set starting IP range and number of clients  
 5. Go to Desktop > IP Configuration on each PC and select DHCP
-``` 
+
 #### 🎨 Topology Diagram
 <div align="center"> <img src="./assets/HW-1/pic-21.jpg" width="auto" alt="DHCP Server"> </div>
 
@@ -420,7 +405,6 @@ Implement a network with a DHCP Server setup.
 - Cable: Cross-Over 
 
 #### 📝 Implementation Steps  
-```plaintext
 1. Add switch, server, and three PCs to workspace  
 2. Connect devices using Cross-Over cable  
 3. In the config tab:  
@@ -431,7 +415,7 @@ Implement a network with a DHCP Server setup.
    - Enter DNS and Default Gateway  
    - Set starting IP range and number of clients  
 5. Go to Desktop > IP Configuration on each PC and select DHCP
-``` 
+
 #### 🎨 Topology Diagram
 <div align="center"> <img src="./assets/HW-1/pic-21.jpg" width="auto" alt="DHCP Server"> </div>
 
@@ -454,7 +438,6 @@ Configure and test a basic web server environment.
 - Cable: Straight-Through
 
 #### 📝 Implementation Steps  
-```plaintext
 1. Add the switch, web server, and a client PC to the workspace.  
 2. Connect devices using appropriate cables.  
 3. Configure IP addresses:  
@@ -462,7 +445,7 @@ Configure and test a basic web server environment.
    - Client PC: 192.168.2.2/24  
 4. Configure web server settings (enable HTTP service) on the server.  
 5. Test connectivity by accessing the web server from the client PC.
-``` 
+
 #### 🎨 Topology Diagram
 <div align="center"> <img src="./assets/HW-2/pic-31.jpg" width="auto" alt="Web Server"> </div>
 
@@ -489,12 +472,9 @@ To sniff the packets exchanged between the user, switch, and server.
 - Straight-Through Cable
 
 #### 📝 Steps
-
-```plaintext
 1. Follow the previous exercise and then continue after completing its steps.
 2. Connect the Sniffer device to the switch using a Straight-Through cable.
 3. Execute the following commands on the switch:
-```
 ```code
 Switch> enable
 Switch# configure terminal
@@ -502,11 +482,9 @@ Switch(config)# monitor session 1 source vlan 1 both
 Switch(config)# monitor session 1 destination interface fastethernet0/1
 Switch# show monitor session 1
 ```
-```plaintext
 4. Test functionality by going to the Desktop/Command Prompt tab and executing commands such as telnet, ping, or browsing to the server's IP address.
 - Notes: This configuration captures all traffic from VLAN 1 and sends it to the Sniffer destination.
 - Note: In this exercise, only specific packets are selected for sniffing.
-```
 
 #### 🎨 Topology Diagram
 <div align="center"> <img src="./assets/HW-2/pic-41.jpg" width="auto" alt="Sniffer Topology"> </div>
