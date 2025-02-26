@@ -22,7 +22,7 @@
 |--------------------------|---------------|-----------------------------|-------------|  
 | [مشاهده](#تمرین-۱)      | ✅ تکمیل‌شده   | ساخت توپولوژی پایه          | ۱           |  
 | [مشاهده](#تمرین-۲)      | ✅ تکمیل‌شده   | راه‌اندازی DHCP             | ۲           |  
-| [مشاهده](#تمرین-۱-۲)    | ✅ تکمیل‌شده   | تمرین اضافی                | ۱-۲         |  
+| [مشاهده](#تمرین-اضافی-۲)    | ✅ تکمیل‌شده   | تمرین اضافی                | ۱-۲         |  
 | [مشاهده](#تمرین-۳)      | ✅ تکمیل‌شده   | کارکردن با وب سرور                | ۳           |  
 | [مشاهده](#تمرین-۴)      | ✅ تکمیل‌شده   | کارکردن با Sniffer               | ۴           |  
 
@@ -112,7 +112,7 @@
 
 </details>
 
-<details id="تمرین-۲">
+<details id="تمرین-اضافی-۲">
 <summary> 📌 تمرین ۲ اضافی: راه اندازی VLAN </summary>
 
 <div dir="rtl">
@@ -268,6 +268,15 @@ Sniff کردن بسته های مخابره شده میان کاربر، سوئ�
 ```code
 Switch> enable
 Switch# configure terminal
+Switch(config)# interface vlan 1
+Switch(config-if)# ip address 192.168.1.10 0.0.0.255
+Switch(config-if)# no shutdown
+Switch(config-if)# exit
+Switch(config)# enable secret class
+Switch(config)# line vty 0 15
+Switch(config-line)# password cisco
+Switch(config-line)# login
+Switch(config-line)# exit
 Switch(config)# monitor session 1 source vlan 1 both
 Switch(config)# monitor session 1 destination interface fastethernet0/1
 Switch# show monitor session 1
@@ -323,7 +332,7 @@ This repository contains implementations of various network topologies aligned w
 |------------|---------------------------|---------------|-------|  
 | 1          | Basic Layer 2 Topology     | ✅ Completed  | [View](#exercise-1)  |  
 | 2          | Implement DHCP     | ✅ Completed  | [View](#exercise-2)  |  
-| 2-1          | Extra Exercise     | ✅ Completed  | [View](#exercise-2-1)  |  
+| 2-1          | Extra Exercise     | ✅ Completed  | [View](#exercise-2-extra)  |  
 | 3          | Working With Web Server         | ✅ Completed | [View](#exercise-3)  | 
 | 4          | Working With Sniffer         | ✅ Completed | [View](#exercise-4)  | 
 
@@ -392,7 +401,7 @@ Implement a network with a DHCP Server setup.
 
 </details>
 
-<details id="exercise-2-1"> 
+<details id="exercise-2-extra"> 
 <summary> 📌 Exercise 2 Extra: Extra Exercise </summary>  
 
 #### 🌟 Objective  
@@ -478,6 +487,15 @@ To sniff the packets exchanged between the user, switch, and server.
 ```code
 Switch> enable
 Switch# configure terminal
+Switch(config)# interface vlan 1
+Switch(config-if)# ip address 192.168.1.10 0.0.0.255
+Switch(config-if)# no shutdown
+Switch(config-if)# exit
+Switch(config)# enable secret class
+Switch(config)# line vty 0 15
+Switch(config-line)# password cisco
+Switch(config-line)# login
+Switch(config-line)# exit
 Switch(config)# monitor session 1 source vlan 1 both
 Switch(config)# monitor session 1 destination interface fastethernet0/1
 Switch# show monitor session 1
